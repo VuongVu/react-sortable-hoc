@@ -79,7 +79,7 @@ export default class AutoScroller {
           left: speed.x * direction.x,
           top: speed.y * direction.y,
         };
-        this.container.scrollTop += offset.top;
+        this.container.scrollBy({ top: offset.top, behavior: 'instant' });
         this.container.scrollLeft += offset.left;
 
         this.onScrollCallback(offset);
